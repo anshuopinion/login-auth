@@ -26,7 +26,7 @@ const Auth_1 = require("./utils/Auth");
 const app = express_1.default();
 const port = config_1.PORT || 9000;
 app.use(morgan_1.default("tiny"));
-app.use(cors_1.default({ credentials: true, origin: process.env.FRONTEND }));
+app.use(cors_1.default({ origin: "*" }));
 app.use(cookie_parser_1.default());
 app.use(express_1.default.json());
 app.use(passport_1.default.initialize());
