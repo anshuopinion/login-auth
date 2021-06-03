@@ -16,7 +16,7 @@ const app = express();
 const port: number = PORT || 9000;
 app.use(morgan("tiny"));
 
-app.use(cors({ credentials: true, origin: "*" }));
+app.use(cors({ origin: "*" }));
 app.use(cookieParser());
 app.use(express.json());
 
